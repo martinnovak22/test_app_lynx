@@ -27,11 +27,8 @@
     justify-content: center;
 }
 
-.counter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+text {
+    color: white
 }
 
 .title {
@@ -40,6 +37,14 @@
     margin-bottom: 15px;
     transform: scale(1);
     transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .bounce {
@@ -47,10 +52,15 @@
     text-shadow: 0 0 8px #ff5f7d;
 }
 
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
 .btn {
     width: 50px;
     height: 25px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.26);
     justify-content: center;
     align-items: center;
     border-radius: 5px;
@@ -60,6 +70,15 @@
     width: 70px
 }
 
+.story-btn {
+    width: 100%;
+    padding: 0 10px;
+}
+
+.tab-active {
+    background-color: rgba(255, 95, 125, 0.38);
+}
+
 .tab-bar {
     position: absolute;
     display: flex;
@@ -67,10 +86,7 @@
     gap: 10px;
 }
 
-.buttons {
-    display: flex;
-    gap: 10px;
-}
+/*------TODO------*/
 
 .todo {
     display: flex;
@@ -79,7 +95,7 @@
     justify-content: center;
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.34);
+    background-color: rgba(255, 255, 255, 0.26);
 }
 
 .input {
@@ -108,4 +124,69 @@
     font-size: 16px;
     padding: 5px 10px;
     border-radius: 5px;
+}
+
+/*------STORY------*/
+
+.story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    animation-duration: 0.4s;
+}
+
+.fade-in {
+    animation-name: fadeIn;
+}
+
+.fade-out {
+    animation-name: fadeOut;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+.story-btn {
+    min-width: 100px;
+    padding: 10px 16px;
+    background: linear-gradient(145deg, #ff93d4, #ffd28d);
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 0 12px #ffd28db2;
+    margin-top: 8px;
+    transition: transform 0.2s ease;
+}
+
+.story-btn:active {
+    transform: scale(0.97);
+}
+
+.scene-svg {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin-bottom: 10px;
 }
