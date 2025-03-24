@@ -16,6 +16,7 @@
     top: -60vw;
     left: -14.27vw;
     transform: rotate(15.25deg);
+    z-index: -1;
 }
 
 .App {
@@ -36,7 +37,14 @@
 .title {
     color: white;
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.bounce {
+    transform: scale(1.3);
+    text-shadow: 0 0 8px #ff5f7d;
 }
 
 .btn {
@@ -48,8 +56,56 @@
     border-radius: 5px;
 }
 
+.tab-btn {
+    width: 70px
+}
+
+.tab-bar {
+    position: absolute;
+    display: flex;
+    top: 10%;
+    gap: 10px;
+}
+
 .buttons {
     display: flex;
     gap: 10px;
-    z-index: 1;
+}
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.34);
+}
+
+.input {
+    width: 200px;
+    height: 25px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+
+.add-btn {
+    margin-bottom: 15px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.todo-item {
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
