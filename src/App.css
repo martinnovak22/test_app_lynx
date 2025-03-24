@@ -1,0 +1,55 @@
+:root {
+    background-color: #000;
+}
+
+.Background {
+    position: fixed;
+    background: radial-gradient(
+            rgba(18, 229, 229, 0) 15%,
+            rgba(239, 155, 255, 0.3) 56.35%,
+            #ff6448 100%
+    );
+    box-shadow: 0px 12.93px 28.74px 0px #ffd28db2 inset;
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    top: -60vw;
+    left: -14.27vw;
+    transform: rotate(15.25deg);
+}
+
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    width: 50px;
+    height: 25px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    z-index: 1;
+}
